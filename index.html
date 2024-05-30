@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Издательство Flow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fonts.css">
+</head>
+<body>
+    <!--Шапка-->
+    <header class="header">
+        <div class="header__wrapper">
+            <!--Лого и слоган-->
+            <div class="header__logo-container"><a href="#">
+                <img src="source/flow_logo.png" alt="Логотип Flow" width="210">
+                <h1>Современное издательство</h1>
+            </a></div>
+            <!--Навигация-->
+            <nav class="header__nav-container">
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li><a href="#authors">Авторы</a></li>
+                </ul>
+                <a href="cart.html" class="icon cart"></a>
+            </nav>
+        </div>
+    </header>
+
+    <!--Main. Основное содержимое страницы-->
+    <main class="main">
+        <!--Слайдер с рекламными баннерами-->
+        <article class="slider">
+            <div class="slider__wrapper">
+                <div class="slider__slides slider__slides_js">
+                    <a href="product1.html">
+                        <img class="slider__img" src="source/upravlenie_vnimaniem_banner.jpg" 
+                        alt="Рекламный баннер книги «Управление вниманием»">
+                    </a>
+                    <a href="product2.html">
+                        <img class="slider__img" src="source/kafe_na_krayu_zemli_banner.jpg" 
+                        alt="Рекламный баннер книги «Кафе на краю земли. Как перестать плыть по течению и вспомнить, зачем ты живешь»">
+                    </a>
+                    <a href="product3.html">
+                        <img class="slider__img" src="source/kak_izobresti_vse_banner.jpg" 
+                        alt="Рекламный баннер книги «Как изобрести все. Создай цивилизацию с нуля»">
+                    </a>
+                    <a href="product1.html">
+                        <img class="slider__img" src="source/upravlenie_vnimaniem_banner.jpg" 
+                        alt="Рекламный баннер книги «Управление вниманием»">
+                    </a>
+                </div>
+                <button class="slider__btn slider__btn-prev slider__btn-prev_js"></button>
+                <button class="slider__btn slider__btn-next slider__btn-next_js"></button>
+            </div>
+        </article>
+
+        <!--Раздел "О Flow"-->
+        <section class="about" id="about">
+            <h2>О Flow</h2>
+            <div class="about__text-container">
+                <p class="first-p">Мы - маленькое издательство из культурной столицы России, Санкт-Петербурга. 
+                    Наша страсть - публикация качественной нехудожественной литературы, которая вдохновляет, 
+                    обучает и расширяет кругозор читателей. Мы стремимся к тому, чтобы каждая наша книга 
+                    была как уникальным путеводителем в мир знаний, открывая новые горизонты и помогая понять сложные темы.
+                </p>
+                <br>
+                <p>Наша команда - это группа энтузиастов, ценящих интеллектуальные вызовы и креативный подход 
+                    к издательскому делу. Мы работаем с авторами, чьи идеи способны изменить мир вокруг нас, 
+                    и стремимся к тому, чтобы каждая наша книга была не просто источником информации, но и объектом гордости.
+                </p>
+                <br>
+                <p>Присоединяйтесь к нам в нашем увлекательном путешествии по миру знаний и открытий. 
+                    Добро пожаловать в мир нехудожественной литературы от издательства Flow!
+                </p>
+            </div>
+        </section>
+
+        <!--Каталог-->
+        <section class="catalog" id="catalog">
+            <h2>Каталог</h2>
+            <!--Карточки товаров-->
+            <div class="catalog__cards-container">
+                <!--Карточка №1-->
+                <article class="catalog__card">
+                    <a href="product1.html">
+                        <img src="source/upravlenie_vnimaniem.png" 
+                        alt="Обложка книги «Управление вниманием»" height="260">
+                        <div class="catalog__card-name">
+                            <h3>Управление вниманием</h3>
+                            <p>Александр Король</p>
+                        </div>
+                    </a>
+                    <p class="price">994 p.</p>
+                    <button class="catalog__to-cart-btn">В корзину</button>
+                </article>
+
+                <!--Карточка №2-->
+                <article class="catalog__card">
+                    <a href="product2.html">
+                        <img src="source/kafe_na_krayu_zemli.png" 
+                        alt="Обложка книги «Кафе на краю земли»" height="260">
+                        <div class="catalog__card-name">
+                            <h3>Кафе на краю земли</h3>
+                            <p>Джон Стрелеки</p>
+                        </div>
+                    </a>
+                    <p class="price">286 p.</p>
+                    <button class="catalog__to-cart-btn">В корзину</button>
+                </article>
+
+                <!--Карточка №3-->
+                <article class="catalog__card">
+                    <a href="product3.html">
+                        <img src="source/kak_izobresti_vse.png" 
+                        alt="Обложка книги «Как изобрести все»" height="260">
+                        <div class="catalog__card-name">
+                            <h3>Как изобрести все</h3>
+                            <p>Райан Норт</p>
+                        </div>
+                    </a>
+                    <p class="price">1044 p.</p>
+                    <button class="catalog__to-cart-btn">В корзину</button>
+                </article>
+
+                <!--Карточка №4-->
+                <article class="catalog__card">
+                    <a href="product4.html">
+                        <img src="source/igry_v_kotorye_igrayut_lyudi.png" 
+                        alt="Обложка книги «Как изобрести все»" height="260">
+                        <div class="catalog__card-name">
+                            <h3>Игры, в которые играют люди</h3>
+                            <p>Эрик Берн</p>
+                        </div>
+                    </a>
+                    <p class="price">2030 p.</p>
+                    <button class="catalog__to-cart-btn">В корзину</button>
+                </article>
+
+                <!--Карточка №5-->
+                <article class="catalog__card">
+                    <a href="product5.html">
+                        <img src="source/krasnye_giganty.png" 
+                        alt="Обложка книги «Красные гиганты»" height="260">
+                        <div class="catalog__card-name">
+                            <h3>Красные гиганты</h3>
+                            <p>Марк Брет Кано</p>
+                        </div>
+                    </a>
+                    <p class="price">1200 p.</p>
+                    <button class="catalog__to-cart-btn">В корзину</button>
+                </article>
+
+                <!--Карточка №6-->
+                <article class="catalog__card">
+                    <a href="product6.html">
+                        <img src="source/sozdanie_personazhej_filmov_i_serialov.png" 
+                        alt="Обложка книги «Создание персонажей фильмов и сериалов»" 
+                        height="260">
+                        <div class="catalog__card-name">
+                            <h3>Создание персонажей</h3>
+                            <p>Оливье Котт</p>
+                        </div>
+                    </a>
+                    <p class="price">538 p.</p>
+                    <button class="catalog__to-cart-btn">В корзину</button>
+                </article>
+
+                <!--Карточка №7-->
+                <article class="catalog__card">
+                    <a href="product7.html">
+                        <img src="source/pochemu_zhirafy_ne_stali_lyudmi.png" 
+                        alt="Обложка книги «Почему жирафы не стали людьми»" height="260">
+                        <div class="catalog__card-name">
+                            <h3>Почему жирафы не стали людьми</h3>
+                            <p>Станислав Дробышевский</p>
+                        </div>
+                    </a>
+                    <p class="price">600 p.</p>
+                    <button class="catalog__to-cart-btn">В корзину</button>
+                </article>
+
+                <!--Карточка №8-->
+                <article class="catalog__card">
+                    <a href="product8.html">
+                        <img src="source/psihosomatika_telo_govorit.png" 
+                        alt="Обложка книги «Психосоматика: Тело говорит»" height="260">
+                        <div class="catalog__card-name">
+                            <h3>Психосоматика: тело говорит</h3>
+                            <p>Екатерина Тур</p>
+                        </div>
+                    </a>
+                    <p class="price">662 p.</p>
+                    <button class="catalog__to-cart-btn">В корзину</button>
+                </article>
+            </div>
+            <!--Кнопка перелистывания страницы-->
+            <div class="catalog__pages-flipper">
+                <button class="catalog__pages-flipper-btn catalog__prev-page-btn" disabled></button>
+                <p>Страница 1 из 1</p>
+                <button class="catalog__pages-flipper-btn catalog__next-page-btn" disabled></button>
+            </div>
+        </section>
+
+        <!--Авторы-->
+        <section class="authors" id="authors">
+            <h2>Авторы</h2>
+            <!--Карточки авторов-->
+            <div class="authors__cards-container">
+                <!--Карточка №1-->
+                <article class="authors__card">
+                    <h3>Александр Король</h3>
+                    <div class="authors__card-content">
+                        <div class="authors__card-img authors__card1-img"></div>
+                        <div class="authors__card-text">
+                            <p>Александр Король — писатель, философ и социолог, родился в 1990 году в Санкт-Петербурге.</p>
+                            <br>
+                            <p>В 16 лет начал вести личный дневник, куда записывал собственные мысли об этом мире. 
+                                Этот дневник стал основой для первой сетевой публикации автора. К 2018 году автор 
+                                написал более 10 текстов, которые публиковались исключительно в цифровом варианте.</p>
+                            <br>
+                            <p>Первая печатная книга под названием «Коридор» вышла в 2018 году и сразу стала бестселлером. 
+                                К 2024 году в печатном виде вышли больше 10 книг Александра.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Карточка №2-->
+                <article class="authors__card">
+                    <h3>Джон Стрелеки</h3>
+                    <div class="authors__card-content">
+                        <div class="authors__card-img authors__card2-img"></div>
+                        <div class="authors__card-text">
+                            <p>Джон П. Стрелеки (род. 13 сентября 1969 г.) — американский автор 
+                                мотивационных книг и создатель концепции «Большой пятёрки для жизни».</p>
+                            <br>
+                            <p>
+                                Родился и вырос в пригороде Чикаго. В 2002 году Стрелеки написал свою первую книгу 
+                                «Кафе на краю земли» и издал её самостоятельно. После того как книга продалась больше 
+                                10 000 копий в 24 странах за год, он был подписан литературным агентом.</p>
+                            <br>
+                            <p>По данным на 2024 год, книги Стрелеки проданы более чем 
+                                в 9 миллионах экземпляров и переведены на 43 языка.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Карточка №3-->
+                <article class="authors__card">
+                    <h3>Райан Норт</h3>
+                    <div class="authors__card-content">
+                        <div class="authors__card-img authors__card3-img"></div>
+                        <div class="authors__card-text">
+                            <p>Райан Норт (родился 20 октября 1980 года) — канадский писатель и программист. 
+                                Он является создателем комиксов о динозаврах, а также автором сценариев для 
+                                серии комиксов «Время приключений» и комиксов Marvel.</p>
+                            <br>
+                            <p>Норт работает не только над комиксами: он адаптировал текст к графическим новеллам 
+                                по произведениям Уильяма Шекспира и Курта Воннегута, а также написал научно-популярную 
+                                энциклопедию «Как изобрести всё. Создай цивилизацию с нуля» — эти произведения попали 
+                                в список бестселлеров по версии New York Times. </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Карточка №4-->
+                <article class="authors__card">
+                    <h3>Эрик Берн</h3>
+                    <div class="authors__card-content">
+                        <div class="authors__card-img authors__card4-img"></div>
+                        <div class="authors__card-text">
+                            <p>Эрик Леннард Берн (1910–1970) — американский психолог и психиатр, 
+                                разработчик трансакционного анализа и сценарного анализа.</p>
+                            <br>
+                            <p>В 1960-х годах Берн работал над теорией трансакционного анализа и написал ряд книг: 
+                                «Трансактный анализ в психотерапии», «Секс в человеческой любви», «Групповое лечение».</p>
+                            <br>
+                            <p>В 1964 году увидела свет книга Эрика Берна «Игры, в которые играют люди» 
+                                (Games People Play). Труд стал бестселлером, был переведён на многие языки 
+                                и вышел миллионным тиражом по всему миру.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Карточка №5-->
+                <article class="authors__card">
+                    <h3>Марк Брет Кано</h3>
+                    <div class="authors__card-content">
+                        <div class="authors__card-img authors__card5-img"></div>
+                        <div class="authors__card-text">
+                            <p>Марк Брет Кано — австралийский профессор, автор книги 
+                                «Красные гиганты. История советского баскетбола».</p>
+                            <br>
+                            <p>В книге рассказывается о том, как советский баскетбол стал частью советской культуры, 
+                                а также символом стойкости и мужества, объединяющим поколения и национальности. 
+                                Издание включает в себя краткое описание карьеры игроков, тренеров, менеджеров, 
+                                журналистов и судей, имена которых звучали на мировой арене не раз.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Карточка №6-->
+                <article class="authors__card">
+                    <h3>Оливье Котт</h3>
+                    <div class="authors__card-content">
+                        <div class="authors__card-img authors__card6-img"></div>
+                        <div class="authors__card-text">
+                            <p>Оливье Котт (родился 20 июня 1963 года) — французский писатель, 
+                                автор сценариев графических романов, историк анимации, иллюстратор и режиссёр.</p>
+                            <br>
+                            <p>Оливье Котт 15 лет проработал в киноиндустрии в качестве режиссёра, 
+                                дизайнера компьютерной графики и постановщика спецэффектов для рекламы, 
+                                телерепортажей, титров, клипов, короткометражных фильмов.</p>
+                            <br>
+                            <p>С 2002 года он посвятил себя написанию художественной литературы 
+                                и работе историком анимационного кино.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Карточка №7-->
+                <article class="authors__card">
+                    <h3>Станислав Дробышевский</h3>
+                    <div class="authors__card-content">
+                        <div class="authors__card-img authors__card7-img"></div>
+                        <div class="authors__card-text">
+                            <p>Станислав Владимирович Дробышевский (род. 2 июля 1978 года, Чита) — 
+                                российский антрополог, кандидат биологических наук, доцент кафедры 
+                                антропологии биологического факультета МГУ имени М. В. Ломоносова.</p>
+                            <br>
+                            <p>Автор ряда учебных пособий для студентов, публикаций 
+                                в периодических научных изданиях и научных монографий.</p>
+                            <br>
+                            <p>В 2017 году Дробышевский получил премию «За верность науке» Минобрнауки РФ.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!--Карточка №8-->
+                <article class="authors__card">
+                    <h3>Екатерина Тур</h3>
+                    <div class="authors__card-content">
+                        <div class="authors__card-img authors__card8-img"></div>
+                        <div class="authors__card-text">
+                            <p>Екатерина Тур — врач, психосоматолог, основатель крупнейших сообществ 
+                                по психосоматике в России и основатель научного направления 
+                                психосоматики в практическом психотерапевтическом подходе.</p>
+                            <br>
+                            <p>Автор статей по психосоматике и психологии, основатель метода 
+                                управления эмоциональным интеллектом у детей и взрослых.</p>
+                            <br>
+                            <p>Книга Екатерины Тур «Психосматика: Тело говорит» 
+                                получила премию «Дебют Года» от издательства ЭКСМО (2024).</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!--Подвал-->
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <!--Лого и копирайт-->
+            <div class="footer__logo-container">
+                <img src="source/flow_logo.png" alt="Логотип Flow" width="193">
+                <br><small>&copy; <time>2024</time> Все права защищены</small>
+            </div>
+            <!--Контакты-->
+            <address>
+                <p>Вопросы по работе издательства, приобретению книг</p>
+                <p>Телефон: <a href="tel:89999999999">8 (999) 999 99 99</a></p>
+                <p>Комментарии по работе сайта — <a href="mailto:support@flow.ru">support@flow.ru</a></p>
+            </address>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

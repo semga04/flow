@@ -1,0 +1,218 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Arial Rounded MT Pro Cyr';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Для реализации прижатия футера к низу страницы */
+    background-color: #F1F1F1;
+}
+
+/* Шапка */
+.header {
+    position:fixed;
+    top:0;
+    z-index: 100;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0A2342;
+}
+
+.header__wrapper {
+    width: 1440px;
+    padding:0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Шапка. Текст */
+.header a{
+    color:#FFFDF7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header h1{
+    font-size: 15px;
+}
+
+/* Шапка. Навигация */
+.header__nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-container ul {
+    padding-left: 0;
+    display: inline-block;
+    list-style-type: none;
+}
+
+.header__nav-container li,
+.icon {
+    display: inline-block;
+    margin-left: 64px;
+    font-size: 36px;
+}
+
+.header__nav-container li a {
+    position: relative;
+}
+
+.icon {
+    width: 41px;
+    height: 38px;
+    margin-top: 3px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+  
+.cart {
+    background-image: url(source/cart.svg);
+}
+
+/* Main */
+.main {
+    width: 1440px;
+    margin: 120px auto 112px; /* Не трогать, это марджин от шапки */
+    padding: 0 40px;
+    flex-grow: 1; /* Для реализации прижатия футера к низу страницы 
+                (чтобы main занимал оставшееся пространство) */
+}
+
+.main__container {
+    margin: 62px auto 0;
+    width: 1126px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Корзина */
+.cart-info {
+    padding: 60px 50px 71px 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+
+.cart-info p {
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 41px;
+}
+
+/* Информация о покупке */
+.buy-info {
+    padding: 54px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    font-size: 32px;
+}
+
+.buy-info p {
+    margin-bottom: 17px;
+}
+
+.buy-info__pre-price {
+    width: 100%;
+    padding: 0 12px;
+    margin-bottom: 36px;
+}
+
+.buy-info__price,
+.buy-info__discount {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy-info .cost {
+    font-weight: bold;
+}
+
+.buy-info .items-count {
+    padding-left: 12px;
+    font-size: 24px;
+    color: #5d5d5d;
+}
+
+.buy-info__final-price {
+    font-weight: bold;
+    margin-top: 36px;
+    margin-bottom: 30px;
+    padding: 0 12px;
+}
+
+.buy-info__buy-button {
+    padding: 16px 20px 16px;
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+    background-color: #0A2342;
+    color: #FFFFFF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.buy-info__buy-button:active{
+    background-color: #0a2342e7;
+}
+
+.buy-info hr {
+    border-radius: 1px;
+    height: 2px;
+    border: none;
+    background-color: #D9D9D9;
+}
+
+/* Подвал */
+.footer {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Для реализации прижатия футера к низу страницы 
+                    (чтобы футер не уменьшался) */
+    background-color: #1F1F1F;
+    color: #FFFDF7;
+    font-size: 14px;
+}
+
+.footer__wrapper {
+    position: relative;
+    bottom: 0;
+    width: 1440px;
+    padding:0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Подвал. Текст */
+.footer small {
+    font-size: 12px;
+}
+
+.footer a {
+    color:#FFFDF7;
+}
+
+.footer address {
+    text-align: right;
+    font-style: normal;
+}

@@ -1,0 +1,407 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Arial Rounded MT Pro Cyr';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Для реализации прижатия футера к низу страницы */
+    background-color: #F1F1F1;
+}
+
+h2 {
+    font-size: 64px;
+    text-align: center;
+    font-weight: bold;
+    color:#0A2342;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+:target::before { /* исправление якорей */
+    content: "";
+    display: block;
+    height: 140px;
+    margin: -120px 0 0;
+}
+
+/* Шапка */
+.header {
+    position:fixed;
+    top:0;
+    z-index: 100;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0A2342;
+}
+
+.header__wrapper {
+    width: 1440px;
+    padding:0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Шапка. Текст */
+.header a{
+    color:#FFFDF7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header h1{
+    font-size: 15px;
+}
+
+/* Шапка. Навигация */
+.header__nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-container ul {
+    padding-left: 0;
+    display: inline-block;
+    list-style-type: none;
+}
+
+.header__nav-container li,
+.icon {
+    display: inline-block;
+    margin-left: 64px;
+    font-size: 36px;
+}
+
+.header__nav-container li a {
+    position: relative;
+}
+
+.icon {
+    width: 41px;
+    height: 38px;
+    margin-top: 3px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+  
+.cart {
+    background-image: url(source/cart.svg);
+}
+
+/* Main */
+.main {
+    width: 1440px;
+    margin: 120px auto 128px; /* Не трогать, это марджин от шапки */
+    padding: 0 40px;
+    flex-grow: 1; /* Для реализации прижатия футера к низу страницы 
+                (чтобы main занимал оставшееся пространство) */
+}
+
+/* Слайдер */
+.slider {
+    width: 1360px;
+    height: 500px;
+}
+
+.slider__wrapper {
+    position: absolute;
+    display: flex;
+    left:50%;
+    transform: translate(-50%);
+    overflow: hidden;
+    width: 1360px;
+    height: 500px;
+}
+
+.slider__slides {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;     
+    transition: all 1s ease 0s;
+}
+
+/* Слайдер. Кнопки слайдера */
+.slider__btn {
+    width: 60px;
+    height: 80px;
+    position: absolute;
+    top:50%;
+    background-color:#FFFDF7;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    border: none;
+    cursor: pointer;
+}
+
+.slider__btn:active {
+    opacity:0.6;
+}
+
+.slider__btn-prev {
+    background-image: url(source/arrow_prev.png);
+    background-position: left center;
+    border-radius: 0 5px 5px 0;
+}
+
+.slider__btn-next {
+    right: 0;
+    background-image: url(source/arrow_next.png);
+    background-position: right center;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Раздел "О Flow" */
+.about {
+    max-width: 1128px;
+    margin: 96px 0 0 117px;
+}
+
+.about h2 {
+    margin-bottom: 32px;
+}
+
+.about p {
+    font-size: 32px;
+}
+
+/* Каталог */
+.catalog {
+    padding-top: 124px;
+}
+
+.catalog h2 {
+    margin-bottom: 54px;
+}
+
+.catalog__cards-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Каталог. Оформление карточек товаров */
+.catalog__card {
+    height: 540px;
+    width: 310px;
+    margin-bottom: 40px;
+    padding: 22px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.catalog__card a {
+    color: black;
+    text-decoration: none;
+}
+
+.catalog__card-name {
+    margin: 0;
+    text-align: center;
+}
+
+.catalog__card-name h3 {
+    font-size: 32px;
+}
+
+.catalog__card-name p {
+    font-size: 20px;
+}
+
+.catalog__card .price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0A2342;
+}
+
+.catalog__to-cart-btn {
+    padding: 8px 30px 10px;
+    border-style: none;
+    font-weight: bold;
+    font-size: 36px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.catalog__to-cart-btn:active {
+    background-color:#e9e9e9;
+}
+
+/* Каталог. Кнопка перелистывания страницы */
+.catalog__pages-flipper {
+    width: 400px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 0 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    background-color: #E7E7E7;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.catalog__pages-flipper-btn {
+    width: 35px;
+    height: 35px;
+    background-color:#E7E7E7;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+.catalog__pages-flipper-btn:enabled:active {
+    background-color:#dedede;
+}
+
+.catalog__pages-flipper-btn:disabled {
+    opacity: 0.5;
+    cursor:default;
+}
+
+.catalog__prev-page-btn {
+    background-image: url(source/arrow_prev.png);
+    background-position: center;
+}
+
+.catalog__next-page-btn {
+    background-image: url(source/arrow_next.png);
+    background-position: center;
+}
+
+/* Авторы */
+.authors {
+    margin-top: 124px;
+}
+
+.authors h2 {
+    margin-bottom: 54px;
+
+}
+
+.authors__cards-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Авторы. Оформление карточек */
+.authors__card {
+    width: 660px;
+    height: 560px;
+    padding: 34px 30px 29px 25px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    background-color: #D9D9D9;
+}
+
+.authors__card h3 {
+    font-size: 40px;
+    padding-bottom: 24px;
+}
+
+.authors__card-content {
+    display: flex;
+}
+
+.authors__card-img {
+    min-width: 184px;
+    max-width: 184px;
+    height: 425px;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.authors__card1-img {
+    background-image: url(source/aleksandr_korol.png);
+}
+
+.authors__card2-img {
+    background-image: url(source/john_strelecky.png);
+}
+
+.authors__card3-img {
+    background-image: url(source/ryan_north.png);
+}
+
+.authors__card4-img {
+    background-image: url(source/eric_berne.png);
+}
+
+.authors__card5-img {
+    background-image: url(source/mark_bret.png);
+}
+
+.authors__card6-img {
+    background-image: url(source/olivier_kotte.png);
+}
+
+.authors__card7-img {
+    background-image: url(source/stanislav_drobyshevskij.png);
+}
+
+.authors__card8-img {
+    background-image: url(source/ekaterina_tur.png);
+}
+
+.authors__card-content p {
+    font-size: 20px;
+    margin-left: 24px;
+}
+
+/* Подвал */
+.footer {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Для реализации прижатия футера к низу страницы 
+                    (чтобы футер не уменьшался) */
+    background-color: #1F1F1F;
+    color: #FFFDF7;
+    font-size: 14px;
+}
+
+.footer__wrapper {
+    width: 1440px;
+    padding:0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Подвал. Текст */
+.footer small {
+    font-size: 12px;
+}
+
+.footer a {
+    color:#FFFDF7;
+}
+
+.footer address {
+    text-align: right;
+    font-style: normal;
+}

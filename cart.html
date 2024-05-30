@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина — Издательство Flow</title>
+    <link rel="stylesheet" href="cart-styles.css">
+    <link rel="stylesheet" href="fonts.css">
+</head>
+<body>
+    <!--Шапка-->
+    <header class="header">
+        <div class="header__wrapper">
+            <!--Лого и слоган-->
+            <div class="header__logo-container"><a href="#">
+                <img src="source/flow_logo.png" alt="Логотип Flow" width="210">
+                <h1>Современное издательство</h1>
+            </a></div>
+            <!--Навигация-->
+            <nav class="header__nav-container">
+                <ul>
+                    <li><a href="index.html#about">О нас</a></li>
+                    <li><a href="index.html#catalog">Каталог</a></li>
+                    <li><a href="index.html#authors">Авторы</a></li>
+                </ul>
+                <a href="#" class="icon cart"></a>
+            </nav>
+        </div>
+    </header>
+
+    <!--Main. Основное содержимое страницы-->
+    <main class="main">
+        <div class="main__container">
+            <section class="cart-info">
+                <p>В вашей корзине пусто</p>
+                <img src="source/bag-dash.png" 
+                alt="Иконка пустого пакета для покупок"
+                width="234" height="234">
+            </section>
+            <section class="buy-info">
+                <p class="items-count">0 товаров</p>
+                <section class="buy-info__pre-price">
+                    <div class="buy-info__price">
+                        <p>Стоимость</p>
+                        <p class="cost">0 р.</p>
+                    </div>
+                    <div class="buy-info__discount">
+                        <p>Сумма скидки</p>
+                        <p class="cost">0 р.</p>
+                    </div>
+                </section>
+                <hr>
+                <section class="buy-info__final-price">
+                    <p>Итого без доставки</p>
+                    <p class="cost">0 p.</p>
+                </section>
+                <button class="buy-info__buy-button">
+                    Перейти к оформлению
+                </button>
+            </section>
+        </div>
+    </main>
+
+    <!--Подвал-->
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <!--Лого и копирайт-->
+            <div class="footer__logo-container">
+                <img src="source/flow_logo.png" alt="Логотип Flow" width="193">
+                <br><small>&copy; <time>2024</time> Все права защищены</small>
+            </div>
+            <!--Контакты-->
+            <address>
+                <p>Вопросы по работе издательства, приобретению книг</p>
+                <p>Телефон: <a href="tel:89999999999">8 (999) 999 99 99</a></p>
+                <p>Комментарии по работе сайта — <a href="mailto:support@flow.ru">support@flow.ru</a></p>
+            </address>
+        </div>
+    </footer>
+</body>
+</html>

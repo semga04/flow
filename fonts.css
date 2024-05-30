@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Arial Rounded MT Pro Cyr";
+    src: local("Arial Rounded MT Pro Cyr Regular"),
+        local("ArialRoundedMTProCyr-Regular"),
+        url(source/Arial_Rounded_MT_Pro_Cyr_Regular.woff2);
+        font-weight: normal;
+}
+@font-face {
+    font-family: "Arial Rounded MT Pro Cyr";
+    src: local("Arial Rounded MT Pro Cyr Bold"),
+        local("ArialRoundedMTProCyr-Bold"),
+        url(source/Arial_Rounded_MT_Pro_Cyr_Bold.woff2);
+        font-weight: bold;
+}
